@@ -1,8 +1,8 @@
-This is a Drupal 8 module for Brafton/ContentLead/Castleford clients to import content from their XML feed into their Drupal 8 site.
+This is a Drupal 9 module for Brafton/ContentLead/Castleford clients to import content from their XML feed into their Drupal 9 site.
 
 ##Requirements
 
-Drupal 8: version beta14+
+Drupal 9: version 1
 
 PHP:
 - DOMDocument
