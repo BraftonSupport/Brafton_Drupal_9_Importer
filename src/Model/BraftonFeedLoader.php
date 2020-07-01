@@ -65,17 +65,18 @@ class BraftonFeedLoader {
      */
     public function display_import_message($import_list) {
       $loop_section = $this->errors->get_section();
-      $this->errors->set_section('Display import message');
-
+      $this->errors->set_section('Display import message');      
       $import_message = '<ul>';
-      if ($import_list['items']) {
+      $counter = 0;
+      if (count($import_list['items']) > 0) {
         foreach($import_list['items'] as $item) {
-          $import_message .= "<li><a href='" . $item['url'] . "'>" . $item['title'] . "</a></li>";
+          $counter++;
+          $import_message .= "<li><a href='".$item['url']->toString()."'>". $item['title'] . "</a></li>";
         }
       }
-      $import_message .+ "</ul>";
-      drupal_set_message(t("You imported " . $import_list['counter'] . " articles:" . $import_message));
-
+      $import_message .= "</ul>";
+      $messenger = \Drupal::messenger();
+      $messenger->addMessage(t("You imported " . $counter . " articles:".$import_message));
       $this->errors->set_section($loop_section);
     }
 

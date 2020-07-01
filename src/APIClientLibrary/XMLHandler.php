@@ -25,8 +25,8 @@ class XMLHandler {
 	 * @return XMLHandler
 	 */
 	function __construct($url){
-	 if(!preg_match('/^http:\/\//', $url)){
-      //$url = 'file://' . $url;
+	 if(preg_match('/^http(s)?:\/\//', $url)!==1){
+      	$url = 'file://' . $url;
     }
 
 		 $this->doc = new \DOMDocument();

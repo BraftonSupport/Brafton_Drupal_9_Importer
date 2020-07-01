@@ -79,11 +79,12 @@ class Photo {
 
 		foreach($photoItems as $photoNode){
 			$p = new Photo();
-
-			$p->setId($photoNode->getElementsByTagName("id")->item(0)->textContent);
-			$p->setAlt($photoNode->getElementsByTagName("htmlAlt")->item(0)->textContent);
-			//$p->setOrientation($photoNode->getElementsByTagName("orientation")->item(0)->textContent);
-      $p->setCaption($photoNode->getElementsByTagName("caption")->item(0)->textContent);
+			$photoId = is_object($photoNode->getElementsByTagName("id")->item(0)) ? $photoNode->getElementsByTagName("id")->item(0)->textContent : " ";
+			$photoAlt = is_object($photoNode->getElementsByTagName("htmlAlt")->item(0)) ? $photoNode->getElementsByTagName("htmlAlt")->item(0)->textContent : " ";
+			$photoCaption = is_object($photoNode->getElementsByTagName("caption")->item(0)) ? $photoNode->getElementsByTagName("caption")->item(0)->textContent : " ";
+			$p->setId($photoId);
+			$p->setAlt($photoAlt);
+      		$p->setCaption($photoCaption);
 
 			//set thumbnail pic and large pic
 			$photoInstancesNode = $photoNode->getElementsByTagName("instance");

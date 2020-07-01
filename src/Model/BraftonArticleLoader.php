@@ -100,7 +100,7 @@ class BraftonArticleLoader extends BraftonFeedLoader{
         $summary = ( !empty($article->getExtract()) ? $article->getExtract() : $article->getHtmlMetaDescription() );
         if (!empty($article->getPhotos())) {
           $image = $this->get_article_image($article->getPhotos()[0]);
-          $new_node->field_brafton_image = system_retrieve_file( $image['url'], NULL, TRUE, FILE_EXISTS_REPLACE );
+          $new_node->field_brafton_image = system_retrieve_file( $image['url'], NULL, TRUE, \Drupal\Core\File\FileSystemInterface::EXISTS_REPLACE );
           $new_node->field_brafton_image->alt = $image['alt'];
         }
         $new_node->status = $this->publish_status;
@@ -119,7 +119,7 @@ class BraftonArticleLoader extends BraftonFeedLoader{
 
         $import_list['items'][] = array(
           'title' => $title,
-          'url' => $new_node->url()
+          'url' => $new_node->toUrl()
         );
         ++$counter;
       }

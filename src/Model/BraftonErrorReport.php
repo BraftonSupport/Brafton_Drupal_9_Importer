@@ -251,7 +251,7 @@ class BraftonErrorReport {
      */
     public function check_for_fatal(){
         $error = error_get_last();
-        if ( $error["type"] == E_ERROR )
+        if ( !is_null($error) && $error["type"] == E_ERROR )
             $this->log_error( $error["type"], $error["message"], $error["file"], $error["line"] );
     }
      /**

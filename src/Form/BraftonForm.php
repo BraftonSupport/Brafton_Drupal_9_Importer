@@ -114,7 +114,8 @@ class BraftonForm extends ConfigFormBase {
 
   public function display_errors_to_user() {
     if(isset($_GET['b_error']) && $_GET['b_error'] == 'vital') {
-      drupal_set_message(t('There was a fatal error when running the importer.'), 'error');
+      $messenger = \Drupal::messenger();
+      $messenger->addMessage('There was a fatal error when running the importer.');
     }
   }
 
@@ -511,7 +512,7 @@ class BraftonForm extends ConfigFormBase {
     $config->save();
 
     $module_info = \Drupal::service('extension.list.module')->getExtensionInfo('brafton_importer');
-    debug($module_info);
+    //debug($module_info);
 
 
     return parent::submitForm($form, $form_state);
