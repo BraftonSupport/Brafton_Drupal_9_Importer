@@ -153,14 +153,14 @@ class BraftonVideoLoader extends BraftonFeedLoader {
       $new_node->field_brafton_id = $brafton_id;
       $new_node->field_brafton_term = $category_ids;
       if ( $image) {
-        $new_node->field_brafton_image = system_retrieve_file( $image['url'], NULL, TRUE, FILE_EXISTS_REPLACE );
+        $new_node->field_brafton_image = system_retrieve_file( $image['url'], NULL, TRUE, \Drupal\Core\File\FileSystemInterface::EXISTS_REPLACE );
         $new_node->field_brafton_image->alt = $image['alt'];
       }
 
       $new_node->save();
       $import_list['items'][] = array(
         'title' => $this_article->fields['title'],
-        'url' => $new_node->url()
+        'url' => $new_node->toUrl()
       );
 
       ++$counter;
@@ -276,7 +276,7 @@ EOT;
         },
 
 EOT;
-    debug($endingBackground . $this->end_cta_title . $this->end_cta_subtitle . $this->end_cta_link . $this->end_cta_text . $buttonImage);
+    //debug($endingBackground . $this->end_cta_title . $this->end_cta_subtitle . $this->end_cta_link . $this->end_cta_text . $buttonImage);
     if (!empty($endingBackground . $this->end_cta_title . $this->end_cta_subtitle . $this->end_cta_link . $this->end_cta_text . $buttonImage)) {
       $script .= <<<EOT
         endOfVideoOptions: {

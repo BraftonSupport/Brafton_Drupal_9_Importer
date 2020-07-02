@@ -12,7 +12,7 @@
  *
  * @return void
  */
-function brafton_importer_cron() {
+/*function brafton_importer_cron() {
 
     $config = \Drupal::configFactory()->getEditable('brafton_importer.settings');
 
@@ -36,7 +36,7 @@ function brafton_importer_cron() {
 
 
 
-}
+}*/
 
 
 /**
