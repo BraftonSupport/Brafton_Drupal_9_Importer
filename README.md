@@ -29,7 +29,7 @@ PHP:
 **Under "General Options"**
 
 - Turn "Master Importer Status" to "On".
-- Set your "API Root" to be either "Brafton", "ContentLead", or "Castleford".
+- Set your "API Root" to be either "Brafton" or "Castleford".
 
 **Under "Article Options"**
 
