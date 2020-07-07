@@ -5,6 +5,7 @@ This is a Drupal 9 module for Brafton clients to import content from their XML f
 Drupal 9: version 1
 
 PHP:
+- 7.4+
 - DOMDocument
 - cURL
 - (Video) fOpen with "allow_url_fopen = true"
