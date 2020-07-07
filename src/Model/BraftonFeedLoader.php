@@ -67,16 +67,15 @@ class BraftonFeedLoader {
       $loop_section = $this->errors->get_section();
       $this->errors->set_section('Display import message');      
       $import_message = '<ul>';
-      $counter = 0;
-      if (count($import_list['items']) > 0) {
+      $count = count($import_list['items']) ?: 0;
+      if ($count > 0) {
         foreach($import_list['items'] as $item) {
-          $counter++;
           $import_message .= "<li><a href='".$item['url']->toString()."'>". $item['title'] . "</a></li>";
         }
       }
       $import_message .= "</ul>";
       $messenger = \Drupal::messenger();
-      $messenger->addMessage(t("You imported " . $counter . " articles:".$import_message));
+      $messenger->addMessage(t("You imported " . $count . " articles:".$import_message));
       $this->errors->set_section($loop_section);
     }
 
