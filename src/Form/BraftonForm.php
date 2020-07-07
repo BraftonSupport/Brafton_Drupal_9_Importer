@@ -166,7 +166,6 @@ class BraftonForm extends ConfigFormBase {
       '#description' => t( 'The root domain of your Api key (i.e, api.brafton.com).' ),
       '#options' => array(
         'brafton.com' => 'Brafton',
-        'contentlead.com' => 'ContentLEAD',
         'castleford.com.au' => 'Castleford',
       ),
       '#default_value' => $config->get('brafton_importer.brafton_api_root'),
