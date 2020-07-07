@@ -12,7 +12,7 @@ PHP:
 
 ##Installation
 
-1. Download .zip file from https://github.com/BraftonSupport/Brafton_Drupal_9_Importer/tree/development.
+1. Download .zip file from https://github.com/BraftonSupport/Brafton_Drupal_9_Importer/archive/master.zip.
 2. In the Drupal admin bar, click the "Extend" button.
 3. Click the "Install new module" button (example.com/admin/modules/install).
 4. Click the "Choose File" button and select the .zip file downloaded in step 1.
