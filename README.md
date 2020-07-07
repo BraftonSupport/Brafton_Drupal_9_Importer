@@ -1,4 +1,4 @@
-This is a Drupal 9 module for Brafton/ContentLead/Castleford clients to import content from their XML feed into their Drupal 9 site.
+This is a Drupal 9 module for Brafton clients to import content from their XML feed into their Drupal 9 site.
 
 ##Requirements
 
@@ -11,7 +11,7 @@ PHP:
 
 ##Installation
 
-1. Download .zip file from https://github.com/ContentLEAD/BraftonDrupal8Module/tree/development.
+1. Download .zip file from https://github.com/BraftonSupport/Brafton_Drupal_9_Importer/tree/development.
 2. In the Drupal admin bar, click the "Extend" button.
 3. Click the "Install new module" button (example.com/admin/modules/install).
 4. Click the "Choose File" button and select the .zip file downloaded in step 1.
