@@ -5,7 +5,7 @@ This is a Drupal 9 module for Brafton clients to import content from their XML f
 Drupal 9: version 1
 
 PHP:
-- 7.4+
+- minimum version 7.4+
 - DOMDocument
 - cURL
 - (Video) fOpen with "allow_url_fopen = true"
@@ -29,7 +29,6 @@ PHP:
 **Under "General Options"**
 
 - Turn "Master Importer Status" to "On".
-- Set your "API Root" to be either "Brafton" or "Castleford".
 
 **Under "Article Options"**
 
@@ -66,8 +65,6 @@ The "Brafton Archive Block" is for linking to all month-year combinations in a s
 ###General Options
 
 **Master importer status**: Allows the importer module to run periodically via the Drupal Cron.
-
-**API Root**: The brand associated with the XML feed (Brafton, ContentLead, or Castleford).
 
 **Brafton Categories**: For using article categorization from the XML feed.
 
