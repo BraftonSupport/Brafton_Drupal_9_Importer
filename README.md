@@ -1,17 +1,18 @@
-This is a Drupal 9 module for Brafton/ContentLead/Castleford clients to import content from their XML feed into their Drupal 9 site.
+This is a Drupal 9 module for Brafton clients to import content from their XML feed into their Drupal 9 site.
 
 ##Requirements
 
 Drupal 9: version 1
 
 PHP:
+- minimum version 7.4+
 - DOMDocument
 - cURL
 - (Video) fOpen with "allow_url_fopen = true"
 
 ##Installation
 
-1. Download .zip file from https://github.com/ContentLEAD/BraftonDrupal8Module/tree/development.
+1. Download .zip file from https://github.com/BraftonSupport/Brafton_Drupal_9_Importer/archive/master.zip.
 2. In the Drupal admin bar, click the "Extend" button.
 3. Click the "Install new module" button (example.com/admin/modules/install).
 4. Click the "Choose File" button and select the .zip file downloaded in step 1.
@@ -28,7 +29,6 @@ PHP:
 **Under "General Options"**
 
 - Turn "Master Importer Status" to "On".
-- Set your "API Root" to be either "Brafton", "ContentLead", or "Castleford".
 
 **Under "Article Options"**
 
@@ -65,8 +65,6 @@ The "Brafton Archive Block" is for linking to all month-year combinations in a s
 ###General Options
 
 **Master importer status**: Allows the importer module to run periodically via the Drupal Cron.
-
-**API Root**: The brand associated with the XML feed (Brafton, ContentLead, or Castleford).
 
 **Brafton Categories**: For using article categorization from the XML feed.
 
