@@ -67,7 +67,7 @@ class BraftonFeedLoader {
       $loop_section = $this->errors->get_section();
       $this->errors->set_section('Display import message');      
       $import_message = '<ul>';
-      $count = count($import_list['items']) ?: 0;
+      $count = isset($import_list['items']) ? count($import_list['items']) : 0;
       if ($count > 0) {
         foreach($import_list['items'] as $item) {
           $import_message .= "<li><a href='".$item['url']->toString()."'>". $item['title'] . "</a></li>";
